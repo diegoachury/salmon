@@ -1,4 +1,30 @@
 Salmon::Application.routes.draw do
+  get "home/index"
+
+  resources :products
+
+
+  resources :tasks
+
+
+  devise_for :users
+
+  resources :categories
+
+
+  resources :customers
+
+
+  resources :companies
+
+
+  devise_for :admins
+ root :to => 'home#index'
+
+  devise_scope :admin do
+get "sign_in", :to => "devise/sessions#new"
+end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

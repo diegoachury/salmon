@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Referencia externa:</b>
+  <%= @product.referencia_externa %>
+</p>
+
+<p>
+  <b>Referencia interna:</b>
+  <%= @product.referencia_interna %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @product.nombre %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @product.imagen %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @product.color %>
+</p>
+
+<p>
+  <b>Talla:</b>
+  <%= @product.talla %>
+</p>
+
+<p>
+  <b>Precio publico:</b>
+  <%= @product.precio_publico %>
+</p>
+
+<p>
+  <b>Precio mayorista:</b>
+  <%= @product.precio_mayorista %>
+</p>
+
+<p>
+  <b>Precio especial:</b>
+  <%= @product.precio_especial %>
+</p>
+
+<p>
+  <b>Admin:</b>
+  <%= @product.admin %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @product.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

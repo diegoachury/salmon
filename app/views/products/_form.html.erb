@@ -1,0 +1,57 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :referencia_externa %><br />
+    <%= f.text_field :referencia_externa %>
+  </div>
+  <div class="field">
+    <%= f.label :referencia_interna %><br />
+    <%= f.text_field :referencia_interna %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :imagen %><br />
+    <%= f.text_field :imagen %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :talla %><br />
+    <%= f.text_field :talla %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_publico %><br />
+    <%= f.text_field :precio_publico %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_mayorista %><br />
+    <%= f.text_field :precio_mayorista %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_especial %><br />
+    <%= f.text_field :precio_especial %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+<%= f.collection_select :category_id, Category.all, :id, :nombre, :include_blank => false %>  
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  referencia_externa: MyString
+  referencia_interna: MyString
+  nombre: MyString
+  imagen: MyString
+  color: MyString
+  talla: MyString
+  precio_publico: 
+  precio_mayorista: 9.99
+  precio_especial: 9.99
+  admin: 
+  category: 
+
+two:
+  referencia_externa: MyString
+  referencia_interna: MyString
+  nombre: MyString
+  imagen: MyString
+  color: MyString
+  talla: MyString
+  precio_publico: 
+  precio_mayorista: 9.99
+  precio_especial: 9.99
+  admin: 
+  category: 
