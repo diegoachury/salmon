@@ -1,6 +1,13 @@
-<h1>Listing products</h1>
+<style>
+body{
+    background: white;
+}
+</style>
+<h3>Listing products</h3>
 
-<table>
+<table class="table table-bordered">
+
+<thead>
   <tr>
     <th>Referencia externa</th>
     <th>Referencia interna</th>
@@ -11,30 +18,33 @@
     <th>Precio publico</th>
     <th>Precio mayorista</th>
     <th>Precio especial</th>
-    <th>Admin</th>
-    <th>Category</th>
+    <th>Administrador</th>
+    <th>Categoria</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+</thead>
 <% @products.each do |product| %>
+<tbody>
   <tr>
     <td><%= product.referencia_externa %></td>
     <td><%= product.referencia_interna %></td>
     <td><%= product.nombre %></td>
-    <td><%= product.imagen %></td>
+    <td><img src="<%= product.imagen %>" style="width: 95px;
+height: 85px;" ></td>
     <td><%= product.color %></td>
     <td><%= product.talla %></td>
     <td><%= product.precio_publico %></td>
     <td><%= product.precio_mayorista %></td>
     <td><%= product.precio_especial %></td>
-    <td><%= product.admin %></td>
-    <td><%= product.category %></td>
+    <td><%= product.admin.last_name %></td>
+    <td><%= product.category.nombre %></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+  </tbody>
 <% end %>
 </table>
 
